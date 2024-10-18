@@ -56,7 +56,8 @@ export class GaragesResolver {
 
     return this.garagesService.create({ ...args, companyId: company.id })
   }
-
+  // "build": "yarn nx run-many -t build",
+  // "render-build": "yarn format:check && yarn tsc && yarn lint && yarn build",
   @Query(() => [Garage], { name: 'garages' })
   findAll(@Args() args: FindManyGarageArgs) {
     return this.garagesService.findAll(args)
